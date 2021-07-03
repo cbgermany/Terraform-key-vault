@@ -31,11 +31,4 @@ resource "azurerm_key_vault_access_policy" "vault" {
 
   key_permissions = each.value.keys
   secret_permissions = each.value.secrets
-  
-  tags = merge(
-    var.common_tags,
-    tomap(
-      {"Component" = "Key Vault"}
-    )
-  )
 }
