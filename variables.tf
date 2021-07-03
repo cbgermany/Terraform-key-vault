@@ -11,7 +11,7 @@ variable "location" {
 }
 
 variable "name" {
-    description = "The name od the key vault"
+    description = "The name of the key vault"
     type        = string
 }
 
@@ -29,4 +29,9 @@ variable "access_policies" {
     secrets   = list(string)
   }))
   default = {}
+}
+
+variable "common_tags" {
+  description = "A Map of common tags to assign to the key vault"
+  type        = map(string)
 }
