@@ -6,6 +6,7 @@ Terraform module to create a key vault and manage access policies
 # Parameters
 
 |Name|Type|Required|Description|
+|---|---|---|---|
 |location|string|True|The location where the key vault will be created|
 |resource_group|string|True|The resource group that will be created to hold the key vault|
 |name|string|True|The name of the key vault to be created|
