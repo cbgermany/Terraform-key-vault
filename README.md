@@ -1,6 +1,13 @@
 # Terraform-key-vault
 Terraform module to create a key vault and manage access policies
 
+# Objective
+This terraform module will perform the following:
+
+- create a resource group to host the key vault
+- create a new key vault
+- create the access policies for keys and secrets
+
 # Usage
 ```hcl
 module "key-vault" {
