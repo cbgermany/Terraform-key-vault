@@ -2,6 +2,32 @@
 Terraform module to create a key vault and manage access policies
 
 # Usage
+'''
+module "key-vault" {
+    source = "../../modules/Terraform-key-vault"
+
+    resource_group = "testrg"
+    location       = "UK South"
+    name           = "yourkeyvaultname"
+    tenant_id      = data.azurerm_client_config.current.tenant_id
+
+    access_policies = {
+      access1 = {
+        object_id = "object id"
+        keys = ["create", "delete", "get", "list","verify","sign"],
+        secrets = ["set","get","list","delete"]
+
+      }
+      access2  = {
+        object_id = "object id"
+        keys = ["get","list"]
+        secrets = ["set", "get", "list"]
+      }
+    }
+
+    common_tags = {}
+}
+'''
 
 # Parameters
 
