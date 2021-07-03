@@ -6,7 +6,7 @@ resource "azurerm_resource_group" "vault" {
 
 # Create the key vault
 resource "azurerm_key_vault" "vault" {
-  name                       = var.nam
+  name                       = var.name
   location                   = azurerm_resource_group.vault.location
   resource_group_name        = azurerm_resource_group.vault.name
   tenant_id                  = var.tenant_id
