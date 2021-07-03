@@ -2,7 +2,7 @@
 Terraform module to create a key vault and manage access policies
 
 # Usage
-'''
+```hcl
 module "key-vault" {
     source = "../../modules/Terraform-key-vault"
 
@@ -27,7 +27,7 @@ module "key-vault" {
 
     common_tags = {}
 }
-'''
+```
 
 # Parameters
 
